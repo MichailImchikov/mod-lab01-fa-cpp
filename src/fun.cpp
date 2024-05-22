@@ -66,7 +66,7 @@ unsigned int faStr2(const char* str) {
             IsWorld = true;
         }
     }
-    return (int)result;
+    return static_cast<float>(result);
 }
 unsigned int faStr3(const char* str) {
     int i = 0;
