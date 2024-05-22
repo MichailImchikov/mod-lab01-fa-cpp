@@ -23,7 +23,7 @@ unsigned int faStr1(const char* str) {
             bufStr.clear();
             continue;
         }
-        if (str[i] == ' ' || str[i]=='\0') {
+        if (str[i] == ' ' || str[i] == '\0') {
             newWord = true;
             i++;
             continue;
@@ -71,7 +71,7 @@ unsigned int faStr2(const char* str) {
 unsigned int faStr3(const char* str) {
     int i = 0;
     int SumChar = 0;
-    int CountWord=0;
+    int CountWord = 0;
     int BufWord = 0;
     while (str[i]) {
         if (str[i] == ' ') {
@@ -80,8 +80,7 @@ unsigned int faStr3(const char* str) {
             }
             SumChar += BufWord;
             BufWord = 0;
-        }
-        else {
+        } else {
             BufWord++;
         }
         i++;
@@ -92,5 +91,5 @@ unsigned int faStr3(const char* str) {
         }
         SumChar += BufWord;
     }
-   return round(static_cast<float>(SumChar) / CountWord);
+    return round(static_cast<float>(SumChar) / CountWord);
 }
