@@ -3,26 +3,20 @@
 #include<vector>
 #include <cmath>
 #include <cctype>
-unsigned int faStr1(const char* str)
-{
+unsigned int faStr1(const char* str) {
     bool newWord = false;
     int Count = 0;
     int i = 0;
     std::vector<char> bufStr;
-    while (str[i])
-    {
-        if (newWord)
-        {
+    while (str[i]) {
+        if (newWord) {
             bool world = true;
-            for (int j = 0; j < bufStr.size(); j++)
-            {
-                if (!isalpha(bufStr[j]))
-                {
+            for (int j = 0; j < bufStr.size(); j++) {
+                if (!isalpha(bufStr[j])) {
                     world = false;
                 }
             }
-            if (world&&bufStr.size()>0)
-            {
+            if (world&&bufStr.size()>0) {
                 Count++;
             }
             newWord = false;
@@ -38,15 +32,12 @@ unsigned int faStr1(const char* str)
         i++;
     }
     bool world = true;
-    for (int j = 0; j < bufStr.size(); j++)
-    {
-        if (!isalpha(bufStr[j]))
-        {
+    for (int j = 0; j < bufStr.size(); j++) {
+        if (!isalpha(bufStr[j])) {
             world = false;
         }
     }
-    if (world && bufStr.size() > 0)
-    {
+    if (world && bufStr.size() > 0) {
         Count++;
     }
     return Count;
