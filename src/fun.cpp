@@ -16,14 +16,14 @@ unsigned int faStr1(const char* str) {
                     world = false;
                 }
             }
-            if (world&&bufStr.size()>0) {
+            if (world&&bufStr.size() > 0) {
                 Count++;
             }
             newWord = false;
             bufStr.clear();
             continue;
         }
-        if (str[i] == ' '||str[i]=='\0') {
+        if (str[i] == ' ' || str[i]=='\0') {
             newWord = true;
             i++;
             continue;
@@ -52,15 +52,13 @@ unsigned int faStr2(const char* str) {
         if (!flag && str[i] != ' ' && str[i] >= 65 && str[i] <= 90&&IsWorld) {
             flag = true;
             count = 1;
-        }
-        else if (flag && str[i] == ' ') {
+        } else if (flag && str[i] == ' ') {
             flag = false;
             result += count;
             if (flag) {
                 IsWorld = true;
             }
-        }
-        else if (str[i] < 97 || str[i] > 122) {
+        } else if (str[i] < 97 || str[i] > 122) {
             count = 0;
         }
         i++;
